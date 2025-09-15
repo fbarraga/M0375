@@ -2,6 +2,9 @@
 
 En aquest markdown teniu un resum de les diapositives vistes a classe, així com activitats d'ampliació. És molt recomanable que intenteu fer aquestes activitats. Amb les hores de classe no hi ha suficient per veure tot lo que s'hauria de veure.
 
+* **Autor**: Francesc Barragán
+* **Darrera Actualització**: 01/09/2025
+
 ## Què és DHCP?
 
 El **DHCP** (Dynamic Host Configuration Protocol) és un protocol de xarxa que permet assignar automàticament configuracions de xarxa als dispositius clients. Opera a la capa d'aplicació del model OSI i utilitza els ports UDP 67 (servidor) i 68 (client).
