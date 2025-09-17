@@ -1,4 +1,8 @@
-# Pràctica: Configuració de DHCP en Switch Cisco Catalyst 2xxx
+# Exercici 4: Configuració de DHCP en Switch Cisco Catalyst 2xxx
+
+**Autor:** Francesc Barragán
+
+**Darrera Actualització:** 15.09.2025
 
 ## Objectius de la pràctica
 
@@ -15,7 +19,7 @@ Disposes d'un switch Cisco Catalyst 2xxx gestionable que necessites configurar p
 
 ## Requisits previs
 
-- Coneixements bàsics de CLI de Cisco IOS
+- Coneixements bàsics de CLI de Cisco IOS (Els haurieu de tenir si heu fet servir Cisco Packettracer)
 - Comprensió de conceptes de VLAN i DHCP
 - Cable de consola RJ45 a DB9 o USB
 - Programari de terminal (PuTTY, Tera Term, etc.)
@@ -33,6 +37,8 @@ Disposes d'un switch Cisco Catalyst 2xxx gestionable que necessites configurar p
 1. Connecta el cable de consola al switch i al PC
 2. Configura el programari de terminal amb els paràmetres correctes
 3. Accedeix al mode de configuració del switch
+4. Etiqueta el switch amb una Dymo indicant el vostre grup
+5. Emplena el document excel amb les dades de l'equip que estàs utilitzant
 
 ### Fase 2: Configuració bàsica
 4. Configura un hostname descriptiu per al switch
@@ -41,16 +47,16 @@ Disposes d'un switch Cisco Catalyst 2xxx gestionable que necessites configurar p
 
 ### Fase 3: Configuració de VLAN
 7. Crea la VLAN 100 amb el nom "DHCP_VLAN"
-8. Configura la interfície VLAN 100 amb l'adreça IP 192.168.100.1/24
+8. Configura la interfície VLAN 100 amb l'adreça IP "Segons el vostre pool de ips"
 9. Assigna almenys un port del switch a la VLAN 100
 
 ### Fase 4: Configuració del servidor DHCP
 10. Crea un pool DHCP anomenat "VLAN100_POOL"
-11. Defineix el rang d'adreces: 192.168.100.10 - 192.168.100.50
-12. Configura la porta d'enllaç per defecte: 192.168.100.1
+11. Defineix el rang d'adreces: "Segons el vostre pool de ips"
+12. Configura la porta d'enllaç per defecte: x.x.x.1
 13. Estableix els servidors DNS: 8.8.8.8 i 8.8.4.4
 14. Configura un temps de concessió d'1 dia
-15. Exclou les adreces 192.168.100.1 - 192.168.100.9
+15. Exclou les adreces x.x.x.1 - x.x.x.9
 
 ### Fase 5: Verificació
 16. Connecta un PC client al port assignat a la VLAN 100
