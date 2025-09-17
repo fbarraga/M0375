@@ -19,7 +19,7 @@ Disposes d'un switch Cisco Catalyst 2xxx gestionable que necessites configurar p
 
 ## Requisits previs
 
-- Coneixements bàsics de CLI de Cisco IOS
+- Coneixements bàsics de CLI de Cisco IOS (Els haurieu de tenir si heu fet servir Cisco Packettracer)
 - Comprensió de conceptes de VLAN i DHCP
 - Cable de consola RJ45 a DB9 o USB
 - Programari de terminal (PuTTY, Tera Term, etc.)
