@@ -43,16 +43,16 @@ Disposes d'un switch Cisco Catalyst 2xxx gestionable que necessites configurar p
 
 ### Fase 3: Configuració de VLAN
 7. Crea la VLAN 100 amb el nom "DHCP_VLAN"
-8. Configura la interfície VLAN 100 amb l'adreça IP 192.168.100.1/24
+8. Configura la interfície VLAN 100 amb l'adreça IP "Segons el vostre pool de ips"
 9. Assigna almenys un port del switch a la VLAN 100
 
 ### Fase 4: Configuració del servidor DHCP
 10. Crea un pool DHCP anomenat "VLAN100_POOL"
-11. Defineix el rang d'adreces: 192.168.100.10 - 192.168.100.50
-12. Configura la porta d'enllaç per defecte: 192.168.100.1
+11. Defineix el rang d'adreces: "Segons el vostre pool de ips"
+12. Configura la porta d'enllaç per defecte: x.x.x.1
 13. Estableix els servidors DNS: 8.8.8.8 i 8.8.4.4
 14. Configura un temps de concessió d'1 dia
-15. Exclou les adreces 192.168.100.1 - 192.168.100.9
+15. Exclou les adreces x.x.x.1 - x.x.x.9
 
 ### Fase 5: Verificació
 16. Connecta un PC client al port assignat a la VLAN 100
