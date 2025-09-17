@@ -1,4 +1,4 @@
-# Pràctica: Configuració de DHCP en Switch Cisco Catalyst 2xxx
+# Exercici 3: Configuració de DHCP en Switch Cisco Catalyst 2xxx
 
 ## Objectius de la pràctica
 
