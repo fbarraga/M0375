@@ -1,4 +1,4 @@
-# Exercici 3: Configuració de DHCP en Switch Cisco Catalyst 2xxx
+# Exercici 4: Configuració de DHCP en Switch Cisco Catalyst 2xxx
 
 ## Objectius de la pràctica
 
@@ -33,6 +33,8 @@ Disposes d'un switch Cisco Catalyst 2xxx gestionable que necessites configurar p
 1. Connecta el cable de consola al switch i al PC
 2. Configura el programari de terminal amb els paràmetres correctes
 3. Accedeix al mode de configuració del switch
+4. Etiqueta el switch amb una Dymo indicant el vostre grup
+5. Emplena el document excel amb les dades de l'equip que estàs utilitzant
 
 ### Fase 2: Configuració bàsica
 4. Configura un hostname descriptiu per al switch
