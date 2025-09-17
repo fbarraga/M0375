@@ -1,5 +1,8 @@
 # Exercici 4: Configuració de DHCP en Switch Cisco Catalyst 2xxx
 
+**Autor:** Francesc Barragán
+**Darrera Actualització:** 15.09.2025
+
 ## Objectius de la pràctica
 
 En finalitzar aquesta pràctica, l'estudiant serà capaç de:
