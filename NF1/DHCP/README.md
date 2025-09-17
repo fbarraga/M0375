@@ -179,6 +179,10 @@ Lease Time: 24 hores
 5. **DHCP Relay**: Necessari per a múltiples subxarxes
 6. **Tipus d'assignació**: Dinàmica, estàtica i automàtica
 
+## Exercicis Bàsics
+
+* [Exercici 4: Configuració d'un DHCP en un dispositiu CISCO](./M0375_NF1_dhcp_exercici4.md)
+
 ## Activitats DHCP Avançades
 
 * [Activitat Ampliació 1: Anàlisi de Vulnerabilitats DHCP](./M0375_NF1_dhcp_activitat1.md)
