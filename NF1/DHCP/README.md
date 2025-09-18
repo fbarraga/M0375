@@ -181,7 +181,7 @@ Lease Time: 24 hores
 
 ## Exercicis Bàsics
 
-* [Exercici 4: Configuració d'un DHCP en un dispositiu CISCO](./M0375_NF1_dhcp_exercici4.md)
+* [Exercici 4: Configuració d'un DHCP en un dispositiu físic](./M0375_NF1_dhcp_exercici4.md)
 
 ## Activitats DHCP Avançades
 
