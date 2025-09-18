@@ -21,12 +21,6 @@
 
 - **Si a la captura no hi ha cap valor que la identifiqui de forma única, cal que es vegi el fons d'escriptori, *notepad* o eines similars amb el vostre nomcognom!**
 
-## VERSIÓ
-
-- **Creació [David Bancells](mailto:dbancells@sapalomera.cat)**
-
-- **Actualització 01/09/25 Francesc Barragán**
-
 ---
 
 En aquesta darrera activitat d'ampliació del NF1 treballarem amb dos sistemes avançats de gestió del DHCP: el DHCP *Relay* i el DHCP *Failover*.
