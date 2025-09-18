@@ -1,4 +1,4 @@
-# Exercici 4: Configuració de DHCP en Switch Cisco Catalyst 2xxx
+# Exercici 4: Configuració de DHCP en Switch o router Cisco/HP/Dell
 
 * **Autor:** Francesc Barragán
 
@@ -8,7 +8,7 @@
 
 En finalitzar aquesta pràctica, l'estudiant serà capaç de:
 
-- Establir connexió per consola amb un switch Cisco
+- Establir connexió per consola amb un switch 
 - Configurar una adreça IP de gestió
 - Crear i configurar VLANs
 - Implementar un servidor DHCP al switch
@@ -16,18 +16,18 @@ En finalitzar aquesta pràctica, l'estudiant serà capaç de:
 
 ## Escenari
 
-Disposes d'un switch Cisco Catalyst 2xxx gestionable que necessites configurar per proporcionar adreces IP automàticament als dispositius de la xarxa. El switch ha d'actuar com a servidor DHCP per a una VLAN específica.
+Disposes d'un switch de capa 3 gestionable que necessites configurar per proporcionar adreces IP automàticament als dispositius de la xarxa. El switch ha d'actuar com a servidor DHCP per a una VLAN específica.
 
 ## Requisits previs
 
-- Coneixements bàsics de CLI de Cisco IOS (Els haurieu de tenir si heu fet servir Cisco Packettracer)
+- Coneixements bàsics de CLI del switch escollit 
 - Comprensió de conceptes de VLAN i DHCP
-- Cable de consola RJ45 a DB9 o USB
+- Cable de consola RJ45 a DB9 o USB depenen del model escollit
 - Programari de terminal (PuTTY, Tera Term, etc.)
 
 ## Material necessari
 
-- 1 Switch Cisco Catalyst 2xxx amb IOS que suporti DHCP
+- 1 Switch gestionable de capa 3 que suporti DHCP
 - 1 Cable de consola
 - 1 PC amb emulador de terminal
 - 2-3 PCs client per a proves
@@ -86,9 +86,8 @@ Disposes d'un switch Cisco Catalyst 2xxx gestionable que necessites configurar p
 
 ## Notes importants
 
-⚠️ **Atenció**: No tots els switches Catalyst 2xxx suporten funció de servidor DHCP. Verifica que el teu model tingui aquesta característica habilitada.
+⚠️ **Atenció**: No tots els switches  suporten funció de servidor DHCP. Verifica que el teu model tingui aquesta característica habilitada.
 
-⚠️ **Compatibilitat**: Alguns models antics poden requerir una versió específica d'IOS per suportar DHCP server.
 
 ## Temps estimat
 
