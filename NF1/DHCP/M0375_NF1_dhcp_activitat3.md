@@ -1,4 +1,4 @@
-# Activitats d'ampliació DHCP i Ciberseguretat - M0375 ASIX
+# Activitats d'ampliació DHCP (M0375 ASIX2)
 
 ## Criteris d'Avaluació
 
