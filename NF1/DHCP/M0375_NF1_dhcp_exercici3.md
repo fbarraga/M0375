@@ -12,7 +12,7 @@
 
 **Utilitzarem la màquina virtual Ubuntu Server 24 des de 0.**
 
-Tal com hem fet a l'exercici 1, en aquest segon exercici utilitzarem un tutorial introductori per a la instal·lació i configuració bàsica del servei DHCP, en aquest cas, sota Ubuntu Server 24 LTS utilitzant Kea DHCP.
+Tal com hem fet a l'exercici 2, en aquest tercer exercici utilitzarem un tutorial introductori per a la instal·lació i configuració bàsica del servei DHCP, en aquest cas, sota Ubuntu Server 24 LTS utilitzant Kea DHCP.
 
 El servei de DHCP el donarem amb el software Kea DHCP, que és la nova solució de codi obert desenvolupada per Internet Systems Consortium (ISC) per implementar servidors DHCP moderns. Kea DHCP és el successor d'ISC DHCP, oferint una arquitectura més modular, millor rendiment i suport natiu per a funcions modernes com APIs REST, hooks dinàmics i configuració JSON.
 
