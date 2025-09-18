@@ -197,7 +197,7 @@ Lease Time: 24 hores
 
 * [Evolució del DHCP a Linux amb la discontinuitat de ISC](./M0375_NF1_dhcp_linux_futur.md)
   
-# Atacs contra Serveis DHCP - Anàlisi Detallada
+# Possibles atacs contra Serveis DHCP
 
 ## Índex
 1. [DHCP Starvation (Esgotament DHCP)](#1-dhcp-starvation-esgotament-dhcp)
