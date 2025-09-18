@@ -1,4 +1,4 @@
-# NF1 -- EL SERVEI DE DHCP
+# Activitats d'ampliació DHCP (M0375 ASIX2)
 
 ## AMPLIACIÓ 7 -- MÚLTIPLES DHCP i CONTROL D'ACCÉS
 
