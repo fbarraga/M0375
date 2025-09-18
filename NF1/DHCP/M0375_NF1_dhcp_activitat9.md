@@ -9,6 +9,7 @@ Al final d'aquesta activitat pràctica, haurieu de ser capaços de:
 - Configurar alertes per anomalies DHCP
 - Detectar atacs comuns mitjançant monitorització
 - Utilitzar Docker Compose v2 per orquestrar serveis
+- Aquesta activitat té finalitats educatives. Mai s'ha d'utilitzar aquesta informació per un mal ús.
 
 ## Prerequisits
 
