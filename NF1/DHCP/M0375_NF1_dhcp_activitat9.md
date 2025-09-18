@@ -2,7 +2,7 @@
 
 ## Objectius de l'Activitat
 
-Al final d'aquesta activitat pràctica, els participants seran capaços de:
+Al final d'aquesta activitat pràctica, haurieu de ser capaços de:
 - Configurar monitorització DHCP en Windows Server i Linux
 - Implementar col·lectores de mètriques DHCP personalitzats
 - Crear dashboards visuals amb Grafana
@@ -22,7 +22,7 @@ Al final d'aquesta activitat pràctica, els participants seran capaços de:
 ```bash
 # Verificar Docker i Compose v2
 docker --version
-docker compose version  # Sense guió!
+docker compose version  
 
 # Si no tens Compose v2, instal·la'l:
 # sudo apt-get update
@@ -1850,4 +1850,3 @@ else
 fi
 ```
 
-Aquesta versió actualitzada utilitza Docker Compose v2 (sense guió) i inclou millores significatives en automatització, monitorització i detecció d'anomalies. Està llesta per usar en entorns de formació professionals.
