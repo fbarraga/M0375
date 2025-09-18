@@ -12,7 +12,7 @@
 
 - **L'activitat és d'ampliació i per tant, voluntària.**
 
-- **És de realització individual i té un pes de 6,5% respecte el 10% d'ampliació del NF.**
+- **És de realització individual**
 
 - **Per defecte, cal que justifiqueu les respostes amb captures de pantalla.**
 
