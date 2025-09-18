@@ -226,7 +226,7 @@ L'atacant genera múltiples paquets DHCP DISCOVER amb adreces MAC falsificades. 
 
 ### Variants Avançades
 
-- **Targeted starvation:** Se centra en subredes específiques
+- **Targeted starvation:** Se centra en subxarxes específiques
 - **Intelligent starvation:** Deixa algunes IPs lliures per evitar detecció
 - **Coordinated attack:** Múltiples atacants des de diferents punts
 
@@ -252,21 +252,7 @@ L'atacant genera múltiples paquets DHCP DISCOVER amb adreces MAC falsificades. 
 
 1. **Reconeixement de xarxa:** Identificar la configuració DHCP actual
 2. **Posicionament estratègic:** Situar-se físicament o lògicament a la xarxa
-3. **Configuració del servidor maliciós:** Crear un perfil DHCP atractiu
-
-#### Configuració del Servidor Maliciós
-
-```bash
-# Exemple de configuració maliciosa (dhcpd.conf)
-subnet 192.168.1.0 netmask 255.255.255.0 {
-    range 192.168.1.100 192.168.1.200;
-    option routers 192.168.1.10;          # Gateway fals (atacant)
-    option domain-name-servers 8.8.8.8, 192.168.1.10;  # DNS mixt
-    option domain-name "corporate.local";
-    default-lease-time 7200;              # Lease curt per control
-    max-lease-time 7200;
-}
-```
+3. **Configuració del servidor maliciós:** Crear un perfil DHCP atractiu (més lease time)
 
 ### Estratègies d'Atac
 
