@@ -71,13 +71,13 @@ El protocol DHCP segueix un procés de 4 passos conegut com a **DORA**:
 
 ### 2. **Estàtica (Reservada)**
 
-- Adreça IP fixa assignada a una MAC específica
+- Adreça IP fixa assignada a una MAC específica (Ho decideix el Sysadmin)
 - Sempre la mateixa IP per al mateix dispositiu
 - Ideal per a servidors i equips crítics
 
 ### 3. **Automàtica**
 
-- Assignació permanent la primera vegada
+- Assignació permanent la primera vegada (Ho decideix el servidor DHCP)
 - L'adreça no canvia mai un cop assignada
 - Poc utilitzada en la pràctica
 
@@ -192,12 +192,15 @@ Lease Time: 24 hores
 * [Activitat Ampliació 4: Auditoria de Seguretat DHCP](./M0375_NF1_dhcp_activitat4.md)
 * [Activitat Ampliació 5: Implementació de DHCPv6 Segur](./M0375_NF1_dhcp_activitat5.md)
 * [Activitat Ampliació 6: Monitoratge i Detecció d'Anomalies DHCP](./M0375_NF1_dhcp_activitat6.md)
+* [Activitat Ampliació 7: Múltiples DHCP i Control d'accés](./M0375_NF1_dhcp_activitat7.md)
+* [Activitat Ampliació 8: DHCP Relay i DHCP Failover](./M0375_NF1_dhcp_activitat8.md)
+* [Activitat Ampliació 9: Monitoratge DHCP amb Grafana](./M0375_NF1_dhcp_activitat9.md)
 
 ## Informació rellevant
 
 * [Evolució del DHCP a Linux amb la discontinuitat de ISC](./M0375_NF1_dhcp_linux_futur.md)
   
-# Atacs contra Serveis DHCP - Anàlisi Detallada
+# Possibles atacs contra Serveis DHCP
 
 ## Índex
 1. [DHCP Starvation (Esgotament DHCP)](#1-dhcp-starvation-esgotament-dhcp)
@@ -226,7 +229,7 @@ L'atacant genera múltiples paquets DHCP DISCOVER amb adreces MAC falsificades. 
 
 ### Variants Avançades
 
-- **Targeted starvation:** Se centra en subredes específiques
+- **Targeted starvation:** Se centra en subxarxes específiques
 - **Intelligent starvation:** Deixa algunes IPs lliures per evitar detecció
 - **Coordinated attack:** Múltiples atacants des de diferents punts
 
@@ -252,21 +255,7 @@ L'atacant genera múltiples paquets DHCP DISCOVER amb adreces MAC falsificades. 
 
 1. **Reconeixement de xarxa:** Identificar la configuració DHCP actual
 2. **Posicionament estratègic:** Situar-se físicament o lògicament a la xarxa
-3. **Configuració del servidor maliciós:** Crear un perfil DHCP atractiu
-
-#### Configuració del Servidor Maliciós
-
-```bash
-# Exemple de configuració maliciosa (dhcpd.conf)
-subnet 192.168.1.0 netmask 255.255.255.0 {
-    range 192.168.1.100 192.168.1.200;
-    option routers 192.168.1.10;          # Gateway fals (atacant)
-    option domain-name-servers 8.8.8.8, 192.168.1.10;  # DNS mixt
-    option domain-name "corporate.local";
-    default-lease-time 7200;              # Lease curt per control
-    max-lease-time 7200;
-}
-```
+3. **Configuració del servidor maliciós:** Crear un perfil DHCP atractiu (més lease time)
 
 ### Estratègies d'Atac
 
