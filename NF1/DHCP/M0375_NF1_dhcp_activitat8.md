@@ -1,5 +1,8 @@
 # Activitats d'ampliació DHCP (M0375 ASIX2)
 
+* *Autor:* Francesc Barragán
+* *Darrera revisió:* 15.09.2025
+
 ## AMPLIACIÓ 8 -- DHCP FAILOVER i DHCP RELAY
 
 **NOM DE L'ALUMNE/s:**
