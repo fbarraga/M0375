@@ -192,6 +192,9 @@ Lease Time: 24 hores
 * [Activitat Ampliació 4: Auditoria de Seguretat DHCP](./M0375_NF1_dhcp_activitat4.md)
 * [Activitat Ampliació 5: Implementació de DHCPv6 Segur](./M0375_NF1_dhcp_activitat5.md)
 * [Activitat Ampliació 6: Monitoratge i Detecció d'Anomalies DHCP](./M0375_NF1_dhcp_activitat6.md)
+* [Activitat Ampliació 7: Múltiples DHCP i Control d'accés](./M0375_NF1_dhcp_activitat7.md)
+* [Activitat Ampliació 8: DHCP Relay i DHCP Failover](./M0375_NF1_dhcp_activitat8.md)
+* [Activitat Ampliació 9: Monitoratge DHCP amb Grafana](./M0375_NF1_dhcp_activitat9.md)
 
 ## Informació rellevant
 
