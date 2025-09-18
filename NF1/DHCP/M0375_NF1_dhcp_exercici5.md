@@ -1,4 +1,4 @@
-#  Exercici 5: DHCP Relay i Snooping amb Cisco 2960
+# Exercici 5: DHCP Relay i Snooping amb Cisco 2960
 
 ## Objectius adaptats
 
@@ -12,7 +12,7 @@
 Com que el Cisco 2960 no suporta servidor DHCP natiu, configurarem:
 
 1. **Switch 2960**: DHCP Relay i Snooping
-2. **Servidor extern**: Ubuntu amb Kea DHCP (de la pràctica anterior)
+2. **Servidor extern**: Ubuntu amb Kea DHCP (de l'exercici anterior)
 
 ## Fase 1: Configuració bàsica (igual que abans)
 
