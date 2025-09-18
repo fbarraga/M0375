@@ -1,5 +1,8 @@
 # Activitats d'ampliació DHCP i Ciberseguretat - M0375 ASIX
 
+* *Autor:* Francesc Barragán
+* *Darrera revisió:* 15.09.2025
+
 ## Criteris d'Avaluació
 
 - **Comprensió teòrica (30%):** Coneixement de vulnerabilitats i contramedides
