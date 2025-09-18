@@ -71,13 +71,13 @@ El protocol DHCP segueix un procés de 4 passos conegut com a **DORA**:
 
 ### 2. **Estàtica (Reservada)**
 
-- Adreça IP fixa assignada a una MAC específica
+- Adreça IP fixa assignada a una MAC específica (Ho decideix el Sysadmin)
 - Sempre la mateixa IP per al mateix dispositiu
 - Ideal per a servidors i equips crítics
 
 ### 3. **Automàtica**
 
-- Assignació permanent la primera vegada
+- Assignació permanent la primera vegada (Ho decideix el servidor DHCP)
 - L'adreça no canvia mai un cop assignada
 - Poc utilitzada en la pràctica
 
