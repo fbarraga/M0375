@@ -78,13 +78,11 @@ subnet 192.168.X.0 netmask 255.255.255.0 {
 
 On evidentment caldrà que substituïu els valors de forma convenient a partir dels vostres valors assignats. Tot i que no tenim una IP al servidor del rang 192.168.X.0/24, ho necessitem perquè quan arribin peticions de la xarxa privada 192.168.X.0/24 torni valors per aquest rang.
 
-### b) 
-Adjunteu una captura amb el valor del fitxer /etc/dhcp/dhcpd.conf un cop configurat. *1 punt*.
+### b) Adjunteu una captura amb el valor del fitxer /etc/dhcp/dhcpd.conf un cop configurat. *1 punt*.
 
 Ara tocarà configurar el servei de DHCP Relay. Per això llanceu `sudo dpkg-reconfigure isc-dhcp-relay` al servidor on teniu el paquet per fer de Relay. Primer us preguntarà la IP del servidor DHCP real, pel que haureu de posar la IP de la Ubuntu Server dins el rang 172.25.X.0/16 on heu configurat el servei. Després, quines interfícies participen en el procés de DHCP relay, i per últim les opcions. Podeu deixar-ho per defecte, sobretot la de les interfícies, perquè tal com ho descriu sembla que només indiqui quina interfície rebrà les peticions de DHCP, però si no hi consten les 2 (o més) que hi participen, les bloquejarà quan tornin. Per això ho deixem en blanc i així les tindrem totes habilitades.
 
-### c) 
-Un cop ho tingueu configurat, aquesta configuració s'haurà allotjat al fitxer /etc/default/isc-dhcp-relay, pel que adjunteu una captura amb el seu contingut. *0,5 punts*.
+### c) Un cop ho tingueu configurat, aquesta configuració s'haurà allotjat al fitxer /etc/default/isc-dhcp-relay, pel que adjunteu una captura amb el seu contingut. *0,5 punts*.
 
 En principi tot està llest, de forma que arranqueu un client configurat amb un adaptador de xarxa en mode 'xarxa privada' assignada al rang 192.168.X.0/24.
 
@@ -92,8 +90,7 @@ A nivell de logs, hauríeu de veure al servidor de DHCP Relay com arriba una pet
 
 No obstant, no hauria d'haver anat bé. El client us hauria d'haver donat *timeout* al rebre la IP. Anem a veure perquè.
 
-### d) 
-Primer demostrem amb els logs el que dèiem, de forma que caldrà que adjunteu una captura de la MAC del client, una captura del /var/log/syslog del servidor de DHCP Relay, on hi constarà la MAC del client associada a un 'forward' cap a la IP del servidor DHCP real, i finalment, els logs del servidor DHCP real conforme si li arriba el DHCPDISCOVER i ell contesta amb un DHCPOFFER del rang que pertoca, ja que amb el DHCPDISCOVER la petició arriba amb la IP del rang 'privat'. *1 punt*.
+### d) Primer demostrem amb els logs el que dèiem, de forma que caldrà que adjunteu una captura de la MAC del client, una captura del /var/log/syslog del servidor de DHCP Relay, on hi constarà la MAC del client associada a un 'forward' cap a la IP del servidor DHCP real, i finalment, els logs del servidor DHCP real conforme si li arriba el DHCPDISCOVER i ell contesta amb un DHCPOFFER del rang que pertoca, ja que amb el DHCPDISCOVER la petició arriba amb la IP del rang 'privat'. *1 punt*.
 
 Així doncs, com és que no ens funciona correctament? Us ajudaré una mica. Anem a veure amb el *tcpdump (sniffer*) què passa a nivell de xarxa.
 
@@ -109,23 +106,19 @@ Només veiem passar les peticions de Request, però no els Reply. Això és perq
 
 Així doncs, cal que afegiu una ruta estàtica des del servidor 1 cap al servidor 2 per indicar-li quina xarxa hi ha al darrera.
 
-### e) 
-Adjunteu una captura amb la comanda que afegeix la ruta i una altra comanda que mostra les rutes que té el servidor 1. *0,75 punts*.
+### e) Adjunteu una captura amb la comanda que afegeix la ruta i una altra comanda que mostra les rutes que té el servidor 1. *0,75 punts*.
 
 Sense fer res més, feu una nova petició d'IP des del client i us hauria de funcionar correctament.
 
-### f) 
-Adjunteu una captura que mostri la configuració de xarxa al client obtinguda per DHCP. *0,75 punts*.
+### f) Adjunteu una captura que mostri la configuració de xarxa al client obtinguda per DHCP. *0,75 punts*.
 
-### g) 
-Torneu a obrir els logs del servidor 1 i 2 servidor dos i ara veureu com han canviat. Al servidor 2 hi apareixerà el forward anterior i a més hi constarà que s'ha reenviat el reply. Al servidor 1 hi constaran les 4 fases del protocol DHCP. Adjunteu les captures corresponents que així ho demostren. *1 punt*.
+### g) Torneu a obrir els logs del servidor 1 i 2 servidor dos i ara veureu com han canviat. Al servidor 2 hi apareixerà el forward anterior i a més hi constarà que s'ha reenviat el reply. Al servidor 1 hi constaran les 4 fases del protocol DHCP. Adjunteu les captures corresponents que així ho demostren. *1 punt*.
 
 Si tot ha anat correctament podreu fer ping tranquil·lament des del client a la IP del server de DHCP real.
 
 Per últim, feu un darrer canvi a la Ubuntu de DHCP Relay. Recordeu que aquest server té 2 IPs estàtiques, però volem que la de l'adaptador que connecta amb el servidor de DHCP real també s'obtingui per DHCP.
 
-### h) 
-Així doncs, canvieu el netplan perquè així sigui i llanceu una petició de renovació d'IP amb `sudo dhclient -v`. Adjunteu la captura corresponent. *1 punt*.
+### h) Així doncs, canvieu el netplan perquè així sigui i llanceu una petició de renovació d'IP amb `sudo dhclient -v`. Adjunteu la captura corresponent. *1 punt*.
 
 No obstant, ara apareix un altre problema. Recordeu que hem afegit aquella ruta estàtica al servidor 1? Ara doncs, la IP de destí de la ruta estàtica ha canviat i per tant, novament no arribaran les peticions de DHCP a la xarxa de DHCP Relay. Aquest punt es pot solucionar, com per exemple, fixant la IP del server2 via DHCP amb reserva, però està pensat perquè us n'adoneu de lo important que és tenir clara l'estructura de xarxa i els elements realment clau que han de tenir IP fixa, sigui de la manera que sigui.
 
@@ -143,18 +136,14 @@ Per fer-ho més senzill, podeu basar-vos en les configuracions descrites al fina
 
 Així doncs, editant-les en cada cas, apliqueu aquestes configuracions al servidor Ubuntu Server 1 i 2.
 
-### i) 
-Quan ho tingueu, adjunteu una captura de `sudo cat /etc/dhcp/dhcpd.conf | grep .` d'ambdós servidors. *1 punt*.
+### i) Quan ho tingueu, adjunteu una captura de `sudo cat /etc/dhcp/dhcpd.conf | grep .` d'ambdós servidors. *1 punt*.
 
 Per demostrar que tot funciona correctament, caldrà provar-ho i revisar-ne els logs. Per tant, arranqueu el client i fixeu-vos en la MAC des d'on demanareu la IP via DHCP. Un cop tingui IP, si llanceu la comanda dhcp-lease-list als dos servidors veureu que tots dos tenen la informació.
 
-### j) 
-Ara, feu un `sudo cat /var/log/syslog | grep MAC` on cal substituir MAC per la MAC del vostre client i veureu les peticions. Cal adjuntar les captures dels logs dels dos servidors. *1 punt*.
+### j) Ara, feu un `sudo cat /var/log/syslog | grep MAC` on cal substituir MAC per la MAC del vostre client i veureu les peticions. Cal adjuntar les captures dels logs dels dos servidors. *1 punt*.
 
-### k) 
-Quines diferències principals hi veieu entre les dues captures? Que poden indicar o què confirmen? *0,5 punts*.
+### k) Quines diferències principals hi veieu entre les dues captures? Que poden indicar o què confirmen? *0,5 punts*.
 
 Finalment, pareu un dels dos servidors, espereu-vos un minut, torneu a llançar una petició de DHCP i us hauria de funcionar correctament. Torneu a arrancar el servidor aturat, espereu-vos un minut i atureu l'altre. Espereu-vos un minut i llanceu una petició de DHCP, que també us hauria d'haver funcionat correctament. Finalment, arranqueu el servidor aturat i els tindreu tots dos novament donant servei.
 
-### l) 
-Adjunteu una captura d'executar `sudo cat /var/log/syslog | grep -i failover` d'un dels dos servidors. Veureu els missatges de sincronització entre els dos servidors i el seu estat. *1 punt*.
+### l) Adjunteu una captura d'executar `sudo cat /var/log/syslog | grep -i failover` d'un dels dos servidors. Veureu els missatges de sincronització entre els dos servidors i el seu estat. *1 punt*.
