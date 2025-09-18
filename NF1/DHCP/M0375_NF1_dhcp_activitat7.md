@@ -21,11 +21,6 @@
 
 - **Si a la captura no hi ha cap valor que la identifiqui de forma única, cal que es vegi el fons d'escriptori, notepad o eines similars amb el vostre nomcognom!**
 
-## VERSIÓ
-
-- **Creació [David Bancells](mailto:dbancells@sapalomera.cat)**
-
-- **Actualització 01/09/25 Francesc Barragán**
 ---
 
 Fins ara hem treballat en una situació bàsica, on hi ha un únic servei de DHCP a un únic servidor dins la mateixa LAN. Això és habitual en xarxes petites, però cal tenir en consideració l'augment de complexitat i situacions que podem tenir en una xarxa mitjana o gran.
